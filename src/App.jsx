@@ -53,6 +53,8 @@ function App() {
       <div className="w-screen  h-screen justify-center items-center bg-[#e9eaf0] text-black flex flex-col ">
         <div className="px-14 flex gap-5  flex-col items-center w-[700px] h-96">
           <h1 className="font-bold text-[#636eee] text-5xl self-center mb-5">TODO APP</h1>
+
+          {/* input && button ( add , delete ) */}
           <div className="flex flex-row justify-between  gap-5  w-full">
             <button onClick={HandleAdd} className="px-4 py-2 bg-[#636eee] rounded-full text-white hover:bg-[#7c7eff] h transition-all duration-200 font-semibold">
               Add Task
@@ -62,6 +64,8 @@ function App() {
               Delete All
             </button>
           </div>
+
+          {/* table item ( task ) */}
           <div className="w-full flex flex-col gap-2 p-4 border rounded-lg bg-[#edeef9]">
             {tasks.length > 0 ? (
               tasks.map((task, index) => (
@@ -90,6 +94,7 @@ function App() {
           </div>
         </div>
       </div>
+      {/* toastify notif */}
       <ToastContainer position="top-right" autoClose={2000} />
     </>
   );
